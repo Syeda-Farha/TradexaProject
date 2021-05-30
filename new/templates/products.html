@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products App</title>
+</head>
+<body>
+<h3>Product details stored in database are as__</h3><hr>
+{% for product in products %}
+<p>
+Name: {{product.name}}<br>
+Weight: {{product.weight}}<br>
+Price: {{product.price}}<br>
+Created at: {{product.created_at}}<br>
+
+</p>
+<hr>
+
+{% endfor %}
+</body>
+</html>

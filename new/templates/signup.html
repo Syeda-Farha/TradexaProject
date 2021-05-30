@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Page</title>
+</head>
+<body>
+</form>
+<h3>Create an Account</h3>
+<hr>
+    <form action="signup" method="post">
+       {% csrf_token %}
+      {% if error %}
+      <div class="alert alert-danger" role="alert">
+        {{error}}
+         </div>
+      {% endif%}
+
+    <label for="username">Username</label>
+    <input required type="text" class="form-control" id="username" name="username" placeholder="Enter User Name"><br>
+
+    <label for="firstname">First Name</label>
+    <input required type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name" ><br>
+
+    <label for="lastname">Last Name</label>
+    <input required type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name"><br>
+
+    <label for="email">Email address</label>
+    <input required type="email" class="form-control" id="email" name="email" placeholder="Enter Email example@gmail.com"><br>
+
+    <label for="password">Password</label>
+    <input required type="password" class="form-control" id="password" name="password" ><br>
+  <button type="submit" class="btn btn-primary">Signup</button><br>
+
+        <a href="login">Already have an account? Login here</a><br>
+
+
+</form>
+</body>
+</html>

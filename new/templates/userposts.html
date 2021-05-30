@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+</head>
+<body>
+<h3>Hello {{user.username}}, your posts are:</h3>
+<hr>
+{% for post in posts %}
+    {% if user.id == post.user.id %}
+        <p>Name: {{post.user.username}}</p>
+        <p>Title: {{post.title}}</p>
+        <p>Description:  {{post.detail}}</p>
+        <p>Created at: {{post.created_at}}</p>
+        <p>Last Updated at: {{post.updated_at}}</p><hr>
+    {% endif %}
+{% endfor %}
+
+</body>
+</html>
